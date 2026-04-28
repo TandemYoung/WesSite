@@ -1,0 +1,16 @@
+{
+  "name": "Wes Freeman for State Representative",
+  "short_name": "Wes Freeman",
+  "description": "Republican candidate for Arkansas State House District 44",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FAF7F2",
+  "theme_color": "#B8202E",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
