@@ -879,7 +879,6 @@ a:focus-visible {
 /* To launch publicly: remove class="locked" from each <body> tag.       */
 body.locked {
   background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);
-  overflow: hidden;
 }
 body.locked > *:not(#site-gate) {
   display: none !important;
