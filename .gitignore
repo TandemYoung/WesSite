@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+*.log
+.env
+.claude/
+CONTENT_CHECKLIST.md
