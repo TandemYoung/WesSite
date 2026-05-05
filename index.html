@@ -236,16 +236,20 @@
         <div class="section-divider">Or volunteer your time</div>
 
         <!--
-          PLACEHOLDER FORM
-          To wire this up for real submissions, replace the <form> below with a Google Form embed:
-          1. Create a Google Form with matching fields
-          2. Click Send > Embed HTML
-          3. Copy the iframe and paste it inside .volunteer-form below this comment
-          The styling in CSS will still frame the iframe cleanly.
+          Volunteer signups are delivered by FormSubmit (formsubmit.co) — no account or API key.
+          Activation: after the first real submission, FormSubmit emails wesfreemanforstaterep@gmail.com
+          a confirmation link AND a random hash. Click the link to activate, then optionally swap the
+          action URL to https://formsubmit.co/<HASH> so the address isn't visible in page source.
         -->
-        <form class="volunteer-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Form is a placeholder — swap in Google Form embed. See HTML comment.');">
+        <form class="volunteer-form" action="https://formsubmit.co/wesfreemanforstaterep@gmail.com" method="POST">
           <h3>Join the Team</h3>
           <p class="note">We&rsquo;ll be in touch soon about how you can help. Your information stays with the campaign &mdash; we don&rsquo;t share it with third parties.</p>
+
+          <!-- FormSubmit config: subject line, disable redirect-to-captcha, honeypot for bots -->
+          <input type="hidden" name="_subject" value="New volunteer signup — Wes Freeman for State Rep">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
           <div class="form-field">
             <label for="first-name">First name *</label>
