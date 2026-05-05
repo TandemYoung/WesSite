@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- 12-point starburst (red) -->
+  <polygon
+    points="50,2 60.9,9.4 74,8.4 79.7,20.3 91.6,26 90.6,39.1 98,50 90.6,60.9 91.6,74 79.7,79.7 74,91.6 60.9,90.6 50,98 39.1,90.6 26,91.6 20.3,79.7 8.4,74 9.4,60.9 2,50 9.4,39.1 8.4,26 20.3,20.3 26,8.4 39.1,9.4"
+    fill="#B8202E"
+  />
+  <!-- Inner white circle -->
+  <circle cx="50" cy="50" r="36" fill="#FFFFFF"/>
+  <!-- Navy ring inside white -->
+  <circle cx="50" cy="50" r="36" fill="none" stroke="#0A2540" stroke-width="1.2"/>
+  <!-- Text: VOTE -->
+  <text x="50" y="40" text-anchor="middle"
+        font-family="Inter, Arial, sans-serif" font-weight="900"
+        font-size="11" letter-spacing="0.5" fill="#B8202E">VOTE</text>
+  <!-- Text: JUNE 2 -->
+  <text x="50" y="58" text-anchor="middle"
+        font-family="Merriweather, Georgia, serif" font-weight="900"
+        font-size="16" fill="#0A2540">JUNE 2</text>
+  <!-- Text: ELECTION -->
+  <text x="50" y="72" text-anchor="middle"
+        font-family="Inter, Arial, sans-serif" font-weight="700"
+        font-size="6.5" letter-spacing="1.2" fill="#0A2540">ELECTION</text>
+</svg>

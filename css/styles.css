@@ -437,17 +437,45 @@ a:focus-visible {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  background:
-    linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-soft) 100%);
   position: relative;
+  /* American flag background fills the entire card */
+  background:
+    url("../assets/flag-bg.svg") center/cover no-repeat,
+    var(--color-navy);
+}
+/* Subtle dark-to-light gradient overlay so Wes pops off the flag */
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(10, 37, 64, 0) 0%, rgba(10, 37, 64, 0.25) 70%, rgba(10, 37, 64, 0.45) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 .hero-photo img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  z-index: 2;
+  /* Subtle drop shadow to lift Wes off the flag */
+  filter: drop-shadow(0 6px 12px rgba(10, 37, 64, 0.35));
 }
 .hero-photo img.missing { display: none; }
+
+/* "Vote June 2" starburst badge in the upper-left corner */
+.vote-badge {
+  position: absolute;
+  top: clamp(0.5rem, 1.5vw, 1rem);
+  left: clamp(0.5rem, 1.5vw, 1rem);
+  width: clamp(72px, 18%, 110px);
+  height: auto;
+  z-index: 3;
+  filter: drop-shadow(0 4px 10px rgba(10, 37, 64, 0.4));
+  pointer-events: none;
+}
 
 /* Why Wes section ----------------------------------------------------- */
 .why-wes {
