@@ -42,27 +42,6 @@
     }
   });
 
-  // SMS consent requires a phone number (TCPA: consent must be tied to a number)
-  var smsConsent = document.querySelector('input[name="sms_consent"]');
-  var phoneInput = document.getElementById('phone');
-  if (smsConsent && phoneInput) {
-    var phoneLabel = document.querySelector('label[for="phone"]');
-    var baseLabel = phoneLabel ? phoneLabel.textContent.trim() : 'Phone';
-    var syncPhoneRequired = function () {
-      if (smsConsent.checked) {
-        phoneInput.required = true;
-        phoneInput.setAttribute('aria-required', 'true');
-        if (phoneLabel) phoneLabel.textContent = baseLabel + ' *';
-      } else {
-        phoneInput.required = false;
-        phoneInput.removeAttribute('aria-required');
-        if (phoneLabel) phoneLabel.textContent = baseLabel;
-      }
-    };
-    smsConsent.addEventListener('change', syncPhoneRequired);
-    syncPhoneRequired();
-  }
-
   // Highlight current nav item based on page
   var path = window.location.pathname.replace(/\/index\.html$/, '/');
   document.querySelectorAll('.nav-links a').forEach(function (a) {
